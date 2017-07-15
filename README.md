@@ -47,8 +47,18 @@ python manage.py createsuperuser
 ```
 python manage.py runserver
 ```
+The console will show all battles set up in the system. Additional information wil be shown regarding status, and data pulled out from Twitter.
 
 ## Run the application
+You can access the admin console in the url
 
+http://127.0.0.1:8000/admin/
 
+You can add, remove and edit battles throught he admin  console.
+
+You also can access an endpoint providing information about battles in the url
+
+http://127.0.0.1:8000/api/battles/1/
+
+where the number at the end of the url is the id of the battle.
 
