@@ -34,7 +34,7 @@ pip install -r requirements.txt
 
 4. Set up Twitter credentials
 
-Enter your Twitter dev credentials in the file settings.py located in the ht_battle_project/ht_battle_project folder. You need to replace the below values with the credentials Twitter provides:
+Enter your Twitter dev credentials in the file settings.py located in the ht_battle_project/ht_battle_project folder. You need to replace the below values:
 ```
 TWITTER_APP_KEY = 'xxxxxxxxx'
 TWITTER_APP_KEY_SECRET = 'xxxxxxxxx'
@@ -72,3 +72,7 @@ http://127.0.0.1:8000/api/battles/1/
 
 where the number at the end of the url is the id of the battle.
 
+## Run the tests
+```
+python manage.py test
+```
