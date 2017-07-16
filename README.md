@@ -34,7 +34,7 @@ pip install -r requirements.txt
 
 4. Set up Twitter credentials
 
-Enter your Twitter dev credentials in the file settings.py located in the ht_battle_project/ht_battle_project folder. You need to replace the below values:
+Enter your Twitter dev credentials in the file settings.py located in the ht_battle_project/ht_battle_project folder. You need to replace the below values with your own:
 ```shell
 TWITTER_APP_KEY = 'xxxxxxxxx'
 TWITTER_APP_KEY_SECRET = 'xxxxxxxxx'
@@ -48,7 +48,7 @@ Move into tag_battle/ht_battle_project/ and run manage.py
 python manage.py migrate
 ```
 
-### Create and admin user
+### Create an admin user
 ```shell
 python manage.py createsuperuser
 ```
@@ -57,20 +57,20 @@ python manage.py createsuperuser
 ```shell
 python manage.py runserver
 ```
-The console will show all battles set up in the system. Additional information wil be shown regarding status, and data pulled out from Twitter.
+The console will show the status of all battles set up in the system evey 10 seconds. Additional information wil be shown regarding status, data pulled out from Twitter and typos.
 
 ## Run the application
-You can access the admin console in the url
+You can access the admin console in the url. Use the admin user and password you have created.
 
 http://127.0.0.1:8000/admin/
 
-You can add, remove and edit battles throught he admin  console.
+You can add, remove and edit battles throught the admin  console.
 
 You also can access an endpoint providing information about battles in the url
 
 http://127.0.0.1:8000/api/battles/1/
 
-where the number at the end of the url is the id of the battle.
+replace the number at the end of the url with the id of the battle.
 
 ## Run the tests
 ```shell
