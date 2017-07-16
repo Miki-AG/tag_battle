@@ -9,23 +9,23 @@
 ### Get the code
 git clone the repo with  the code in a local directory
 ```shell
-https://github.com/Miki-AG/tag_battle.git
+git clone https://github.com/Miki-AG/tag_battle.git
 ```
 
 ### Replicate python environment
-1. Create a virtualenv
+1. Create a virtualenv tb
 ```shell
-virtualenv ENV
+virtualenv tb
 ```
 
 2. Activate the new environment
 ```shell
-source ./bin/activate
+source ./tb/bin/activate
 ```
 
-3. Move into the tag_battle folder and install all required packages
+3. Install all required packages
 ```shell
-pip install -r requirements.txt
+pip install -r ./tag_battle/requirements.txt
 ```
 
 ### Set up Twitter credentials
@@ -39,7 +39,13 @@ TWITTER_ACCESS_TOKEN_SECRET = 'xxxxxxxxx'
 ```
 
 ### Run manage.py
-Move into tag_battle/ht_battle_project/ and run manage.py
+Move into tag_battle/ht_battle_project/ and create all the models:
+
+Create migration scripts for the app:
+```shell
+python manage.py makemigrations ht_battle_app
+```
+Migrate the app
 ```shell
 python manage.py migrate
 ```
