@@ -48,6 +48,7 @@ python manage.py migrate
 ```shell
 python manage.py createsuperuser
 ```
+Youn will be prompted to enter a username and a password.
 
 ## Run the application
 
