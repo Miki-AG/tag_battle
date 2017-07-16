@@ -57,7 +57,7 @@ python manage.py createsuperuser
 ```shell
 python manage.py runserver
 ```
-The console will show the status of all battles set up in the system evey 10 seconds. Additional information wil be shown regarding status, data pulled out from Twitter and typos.
+The console will show the status of all battles set up in the system every 10 seconds. Additional information wil be shown regarding status, data pulled out from Twitter and typos.
 
 ## Run the application
 You can access the admin console in the url. Use the admin user and password you have created.
