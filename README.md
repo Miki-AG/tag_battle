@@ -39,7 +39,7 @@ TWITTER_ACCESS_TOKEN_SECRET = 'xxxxxxxxx'
 ```
 
 ### Run manage.py
-Move into tag_battle/ht_battle_project/ and create all the models:
+Move to ./tag_battle/ht_battle_project/ and create all the models:
 
 Create migration scripts for the app:
 ```shell
