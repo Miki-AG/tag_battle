@@ -24,9 +24,6 @@ class HtBattleAppConfig(AppConfig):
         """ Executed twice by Django, must check RUN_MAIN to
             avoid running two threads """
         if os.environ.get('RUN_MAIN') is not None:
-            pass
-            #single_thread = threading.Thread(
-            #    target=heartbeat, name='twitter_checker')
-            #single_thread.start()
-
-
+            single_thread = threading.Thread(
+                target=heartbeat, name='twitter_checker')
+            single_thread.start()
