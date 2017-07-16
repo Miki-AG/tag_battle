@@ -1,9 +1,5 @@
 # tag_battle
 
-Tested in Mac OS Sierra 10.12.5
-
-
-
 ## Requirements
 - Python 2.7
 - You also need to install [pip](https://pypi.python.org/pypi/pip) and [virtualenv](https://virtualenv.pypa.io)
@@ -76,3 +72,6 @@ http://127.0.0.1:8000/api/battles/1/
 ```shell
 python manage.py test
 ```
+
+Built and tested in Mac OS Sierra 10.12.5
+
