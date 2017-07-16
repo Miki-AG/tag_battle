@@ -2,7 +2,7 @@
 
 ## Requirements
 - Python 2.7
-- You also need to install [pip](https://pypi.python.org/pypi/pip) and [virtualenv](https://virtualenv.pypa.io)
+- You also will need [pip](https://pypi.python.org/pypi/pip) and [virtualenv](https://virtualenv.pypa.io)
 
 ## Setup
 
