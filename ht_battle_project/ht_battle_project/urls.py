@@ -27,7 +27,7 @@ class BatlleSerializer(serializers.HyperlinkedModelSerializer):
         elif battle.tag_1_typos > battle.tag_2_typos:
             return battle.tag_2
         else:
-            return 'Drawn'
+            return 'Draw'
 
     ### Serializers define the API representation ###
     class Meta:
