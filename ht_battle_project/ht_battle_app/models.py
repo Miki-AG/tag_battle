@@ -27,16 +27,28 @@ class Battle(models.Model):
                     self.tag_2, self.tag_2_typos)
 
     def is_active(self):
-        """ Battle is active """
+        """ Battle is active
+
+        Returns:
+            True if battle is active.
+        """
         return (self.start < timezone.now()
                 and self.end > timezone.now())
 
     def has_finished(self):
-        """ Battle has finished """
+        """ Battle has finished
+
+        Returns:
+            True if battle has finished.
+        """
         return self.end > timezone.now()
 
     def status(self):
-        """ Returns text status """
+        """ Returns text status
+
+        Returns:
+            Current status of the battle.
+        """
         if self.is_active():
             return 'RUNNING'
         elif self.start > timezone.now():

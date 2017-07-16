@@ -1,10 +1,12 @@
 # -*- coding: utf-8 -*-
+""" Helper functions """
 from django.core.exceptions import AppRegistryNotReady
 from django.conf import settings
 from enchant.checker import SpellChecker
 from twython import Twython
 
 def check_twitter():
+    """ Periodically check for active battles """
     try:
         from models import Battle
         for battle in Battle.objects.all():
@@ -26,6 +28,15 @@ def check_twitter():
         pass
 
 def run_battle(tag, last_tweet_id):
+    """ Get tweets and calculate typos for a given tag.
+
+    Args:
+        tag: The tag to be processed.
+        last_tweet_id: Id of he last tweet retrieved.
+
+    Returns:
+        Tuple containing the last tweet id and number of typos.
+    """
     tweets = get_tweets(tag, last_tweet_id)
     is_first = True
     number_of_typos = 0
@@ -37,6 +48,15 @@ def run_battle(tag, last_tweet_id):
     return (last_tweet_id, number_of_typos)
 
 def get_tweets(tag, since_id):
+    """ Get tweets
+
+    Args:
+        tag: The tag to be processed.
+        since_id: Id of he last tweet retrieved.
+
+    Returns:
+        All tweets for that specific tag.
+    """
     twitter = Twython(
         app_key=settings.TWITTER_APP_KEY,
         app_secret=settings.TWITTER_APP_KEY_SECRET,
@@ -46,6 +66,15 @@ def get_tweets(tag, since_id):
     return search['statuses']
 
 def get_typos(text):
+    """ Get typos (words not correct according to an en_US
+        spell checker)
+
+    Args:
+        text: Text to be processed.
+
+    Returns:
+        Number of typos for that text.
+    """
     spell_checker = SpellChecker("en_US")
     spell_checker.set_text(text)
     print '\n\tTweet: {}'.format(text)

@@ -1,4 +1,6 @@
 # -*- coding: utf-8 -*-
+
+""" Configuration of the admin models """
 from __future__ import unicode_literals
 
 from django.contrib import admin

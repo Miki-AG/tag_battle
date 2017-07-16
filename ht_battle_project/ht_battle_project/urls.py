@@ -18,8 +18,13 @@ from django.conf.urls import url, include
 from ht_battle_app.models import Battle
 from rest_framework import routers, serializers, viewsets
 
+
 class BatlleSerializer(serializers.HyperlinkedModelSerializer):
-    """ http://127.0.0.1:8000/api/battles/1/ """
+    """ http://127.0.0.1:8000/api/battles/1/
+
+    Returns:
+        Name of the tag who is winning or 'Draw'.
+    """
     who_is_winning = serializers.SerializerMethodField()
     def get_who_is_winning(self, battle):
         if battle.tag_1_typos < battle.tag_2_typos:
@@ -29,9 +34,8 @@ class BatlleSerializer(serializers.HyperlinkedModelSerializer):
         else:
             return 'Draw'
 
-    ### Serializers define the API representation ###
     class Meta:
-        ### Meta class ###
+        """ Meta class """
         model = Battle
         fields = [
             'who_is_winning',
@@ -40,10 +44,12 @@ class BatlleSerializer(serializers.HyperlinkedModelSerializer):
             'start', 'end']
 
 
-# ViewSets define the view behavior.
 class BatlleViewSet(viewsets.ModelViewSet):
+    """ ViewSets define the view behavior."""
     queryset = Battle.objects.all()
     serializer_class = BatlleSerializer
+    http_method_names = ['get']
+
 
 # Routers provide an easy way of automatically determining the URL conf.
 router = routers.DefaultRouter()
