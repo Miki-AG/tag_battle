@@ -64,7 +64,8 @@ http://127.0.0.1:8000/admin/
 
 You can add, remove and edit battles throught the Admin Console.
 
-The application exposes a public endpoint that provides information about battles in the url:
+### Public API
+The application exposes an endpoint that provides information about battles in the url:
 
 http://127.0.0.1:8000/api/battles/1/
 
