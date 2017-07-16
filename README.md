@@ -49,13 +49,14 @@ python manage.py migrate
 python manage.py createsuperuser
 ```
 
+## Run the application
+
 ### Startup the dev server
 ```shell
 python manage.py runserver
 ```
 The console will show the status of all battles set up in the system every 10 seconds. Additional information wil be shown regarding status, data pulled out from Twitter and typos.
 
-## Run the application
 Use the admin user and password you have created to access the admin console in the below url:
 
 http://127.0.0.1:8000/admin/
