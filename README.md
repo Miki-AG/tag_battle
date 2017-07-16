@@ -43,6 +43,7 @@ Move to ./tag_battle/ht_battle_project/ and create all the models:
 
 Create migration scripts for the app:
 ```shell
+cd ./tag_battle/ht_battle_project/
 python manage.py makemigrations ht_battle_app
 ```
 Migrate the app
